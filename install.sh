@@ -23,3 +23,12 @@ rm composer-setup.php
 # Symfony
 wget https://get.symfony.com/cli/installer -O - | bash
 mv ~/.symfony/bin/symfony /usr/local/bin/symfony
+
+# Nodejs
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+bash nodesource_setup.sh
+rm nodesource_setup.sh
+apt install -y nodejs
+
+# SASS
+npm install -g sass
