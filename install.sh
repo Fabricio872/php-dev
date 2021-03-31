@@ -13,6 +13,8 @@ apt install -y php7.4-dev php7.4-curl php7.4-xml php7.4-gd php7.4-imagick php7.4
 apt install -y php7.3-dev php7.3-curl php7.3-xml php7.3-gd php7.3-imagick php7.3-zip php7.3-mysql php7.3-sqlite3 php7.3-pgsql php7.3-intl
 # PHP 7.2
 apt install -y php7.2-dev php7.2-curl php7.2-xml php7.2-gd php7.2-imagick php7.2-zip php7.2-mysql php7.2-sqlite3 php7.2-pgsql php7.2-intl
+# PHP 7.0
+apt install -y php7.0-dev php7.0-curl php7.0-xml php7.0-gd php7.0-imagick php7.0-zip php7.0-mysql php7.0-sqlite3 php7.0-pgsql php7.0-intl
 
 # Composer
 apt install -y unzip
