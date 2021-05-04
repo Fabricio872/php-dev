@@ -19,6 +19,7 @@ apt install -y php7.0-dev php7.0-curl php7.0-xml php7.0-gd php7.0-imagick php7.0
 # Composer
 apt install -y unzip
 apt install -y curl
+apt install -y libnode72
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 rm composer-setup.php
