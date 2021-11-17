@@ -3,9 +3,12 @@
 add-apt-repository ppa:ondrej/php
 apt-get update
 
-# PHP 8
+# PHP default latest
 apt install -y php-dev php-curl php-xml php-gd php-imagick php-zip php-mysql php-sqlite3 php-pgsql php-intl php-xdebug php-mbstring
 echo -e "\n\nxdebug.mode=debug" | tee -a $(php -i | grep /.+/php.ini -oE)
+# PHP 8.1
+apt install -y php8.1-dev php8.1-curl php8.1-xml php8.1-gd php8.1-imagick php8.1-zip php8.1-mysql php8.1-sqlite3 php8.1-pgsql php8.1-intl php8.1-xdebug php8.1-mbstring
+echo -e "\n\nxdebug.mode=debug" | tee -a $(php8.1 -i | grep /.+/php.ini -oE)
 # PHP 8
 apt install -y php8.0-dev php8.0-curl php8.0-xml php8.0-gd php8.0-imagick php8.0-zip php8.0-mysql php8.0-sqlite3 php8.0-pgsql php8.0-intl php8.0-xdebug php8.0-mbstring
 echo -e "\n\nxdebug.mode=debug" | tee -a $(php8.0 -i | grep /.+/php.ini -oE)
