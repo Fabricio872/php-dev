@@ -2,6 +2,7 @@
 
 add-apt-repository ppa:ondrej/php
 apt-get update
+apt install -y libnode72
 
 # PHP default latest
 apt install -y php-dev php-curl php-xml php-gd php-imagick php-zip php-mysql php-sqlite3 php-pgsql php-intl php-xdebug php-mbstring
@@ -28,7 +29,6 @@ echo -e "\n\nxdebug.mode=debug" | tee -a $(php7.0 -i | grep /.+/php.ini -oE)
 # Composer
 apt install -y unzip
 apt install -y curl
-apt install -y libnode72
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 rm composer-setup.php
@@ -41,7 +41,7 @@ mv ~/.symfony/bin/symfony /usr/local/bin/symfony
 curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
 bash nodesource_setup.sh
 rm nodesource_setup.sh
-apt install -y nodejs
+apt install -y libnode72 nodejs # After nodejs is installed it removes libnode72 package
 
 # Yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -50,4 +50,4 @@ apt update
 apt install -y yarn
 
 # SASS
-npm install -g sass
+yarn global add sass
