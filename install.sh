@@ -34,8 +34,9 @@ php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 rm composer-setup.php
 
 # Symfony
-wget https://get.symfony.com/cli/installer -O - | bash
-mv ~/.symfony/bin/symfony /usr/local/bin/symfony
+echo 'deb [trusted=yes] https://repo.symfony.com/apt/ /' | sudo tee /etc/apt/sources.list.d/symfony-cli.list
+sudo apt update
+sudo apt install symfony-cli
 
 # Nodejs
 curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
