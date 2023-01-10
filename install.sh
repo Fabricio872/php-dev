@@ -34,15 +34,13 @@ php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 rm composer-setup.php
 
 # Symfony
-echo 'deb [trusted=yes] https://repo.symfony.com/apt/ /' | sudo tee /etc/apt/sources.list.d/symfony-cli.list
+curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
 sudo apt update
 sudo apt install symfony-cli
 
 # Nodejs
-curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
-bash nodesource_setup.sh
-rm nodesource_setup.sh
-apt install -y libnode72 nodejs # After nodejs is installed it removes libnode72 package
+curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - &&
+sudo apt-get install -y nodejs
 
 # Yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
